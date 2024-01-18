@@ -21,3 +21,7 @@ Route::get('/admin', function () {
     return view('admin.adminlogin');
 });
 
+Route::get('/dashboard', function () {
+    return view('admin.admindashboard');
+});
+

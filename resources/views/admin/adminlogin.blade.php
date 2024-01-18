@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet'>
     <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Girassol&display=swap');
+
+
 .bg-image-vertical {
 position: relative;
 overflow: hidden;
@@ -21,7 +27,18 @@ height: 100%;
 }
 
 body{
+  font-family: "Barlow Semi Condensed";
   background: linear-gradient(180deg, #680E0E 0%, #D21919 100%);
+}
+h1{
+  font-family: 'Girassol', serif;
+}
+.normaltext{
+  font-family: "Barlow Semi Condensed";
+  font-weight: 500px;
+}
+a{
+  text-decoration: none;
 }
 
     </style>
@@ -36,24 +53,31 @@ body{
 
         <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5" style="">
 
-          <form style="width: 35rem; padding-left: 150px;">
+        
 
-            <h3 class="fw-normal mb-4 pb-3" style="letter-spacing: 1px;">SELAMAT DATANG, ADMIN</h3>
+          <form style="width: 40rem; padding-left: 150px;">
+          <div class="logo" style="display: flex;">
+            <img src="image/logosmkn1.png" alt="" style="padding-bottom: 50px;">
+
+            <h1 style="padding-top: 18px; color:#F90">YEARBOOK SMKN 1 KOTA BEKASI</h1>
+            </div>
+            
+            <h1 class="fw-normal mb-4 pb-3" style="letter-spacing: 1px; color:#F90">SELAMAT DATANG, ADMIN</h1>
 
             <div class="form-outline mb-4 pb-2">
-              <input type="email" id="form2Example18" class="form-control form-control-lg" />
+              <input type="email" id="form2Example18" class="form-control form-control-lg" style="height: 40pt;" />
             </div>
 
             <div class="form-outline mb-2">
-              <input type="password" id="form2Example28" class="form-control form-control-lg" />
+              <input type="password" id="form2Example28" class="form-control form-control-lg" style="height: 40pt;" />
             </div>
-            <div>
-              <input type="checkbox" name="show">
-              <label for="show">Show Password</label>
+            <div class="normaltext" style="margin-left: 10px;">
+            <input type="checkbox" style="transform: scale(1.5); margin-right: 8px;" name="show" onclick="togglePassword()">
+              <label for="show" style="color:white; ">Show Password</label>
             </div>
 
-            <div class="pt-4 mb-4">
-              <button class="btn btn-info btn-lg btn-block" type="button" style="width: 10rem; float: right; background-color: #F90; color:black">LOGIN</button>
+            <div class="normaltext">
+              <a href="/dashboard"><button class="btn btn-info btn-lg btn-block" type="button" style="width: 10rem; float: right; background-color: #F90; color:black">LOGIN</button></a>
             </div>
 
 
@@ -70,4 +94,15 @@ body{
   </div>
 </section>
 </body>
+
+<script>
+  function togglePassword() {
+    var passwordInput = document.getElementById("form2Example28");
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+    } else {
+      passwordInput.type = "password";
+    }
+  }
+</script>
 </html>
